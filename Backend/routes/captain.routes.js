@@ -10,7 +10,7 @@ router.post('/register', [
     body('password').isLength({min: 6}).withMessage('Password must be at least 6 characters long'),
     body('vehicle.color').isLength({min: 3}).withMessage('Color must be at least 3 character long'),
     body('vehicle.plate').isLength({min: 3}).withMessage('Plate must be at least 3 character long'),
-    body('vehicle.capactity').isInt({min: 1}).withMessage('Capacity must be interger and atleast one digit long'),
+    body('vehicle.capacity').isInt({min: 1}).withMessage('Capacity must be interger and atleast one digit long'),
     body('vehicle.vehicleType').isIn([ 'car', 'bike', 'auto' ]).withMessage('Vehicle type must be - car, bike or auto')
 ],
     captainController.registerCaptain
