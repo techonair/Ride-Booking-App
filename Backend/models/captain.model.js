@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const captainSchema =   mongoose.Schema.create({
+const captainSchema = mongoose.Schema({
     fullname: {
         firstname: {
             type: String,
@@ -60,7 +60,6 @@ const captainSchema =   mongoose.Schema.create({
     location: {
         lat: {
             type: Number,
-            required: true
         },
         lng: {
             type: Number,

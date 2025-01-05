@@ -1,6 +1,6 @@
 const { response } = require('../app');
 const captainModel = require("../models/captain.model");
-const userService = require("../services/captain.service");
+const captainService = require("../services/captain.service");
 const { validationResult } = require("express-validator");
 const blacklistToken = require("../models/blacklistToken.model");
 
@@ -18,7 +18,7 @@ module.exports.registerCaptain = async (req, res, next ) => {
         return res.status(400).json({message : 'Captain already exist'})
     }
 
-    const hashedPassword = await captainModel.hashedPassword(password);
+    const hashedPassword = await captainModel.hashPassword(password);
 
     const captain = await captainService.createCaptain({
         firstname: fullname.firstname,
