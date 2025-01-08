@@ -213,5 +213,3 @@ Requires a valid JWT token in the Authorization header or cookie.
 ### Example Response
 
 - `message` (string): Logout successfully.
-
-
